@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
         :root {
             --bg: #0a0a0a;
@@ -209,7 +210,7 @@
         
         /* About Banner */
         .about-banner {
-            padding: 4rem 5%;
+            padding: 5rem 5%;
             background: var(--surface);
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -305,8 +306,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
             margin-bottom: 1.5rem;
+        }
+        
+        .service-icon i {
+            font-size: 1.6rem;
+            color: var(--accent);
         }
         
         .service-card h3 {
@@ -422,12 +427,20 @@
             border: 1px solid var(--border);
         }
         
-        .why-num {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 136, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .why-icon i {
+            font-size: 1.5rem;
             color: var(--accent);
-            margin-bottom: 0.5rem;
         }
         
         .why-title {
@@ -466,13 +479,19 @@
             color: var(--accent);
             font-size: 1.1rem;
             margin-bottom: 1rem;
+            display: flex;
+            gap: 0.2rem;
+        }
+        
+        .test-stars i {
+            font-size: 1rem;
         }
         
         .test-text {
             font-size: 0.95rem;
             color: var(--text);
             line-height: 1.7;
-            margin-bottom: 1.5rem;
+           1.5rem;
             font-style: italic;
         }
         
@@ -487,10 +506,13 @@
             height: 44px;
             border-radius: 50%;
             background: var(--surface);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
+            overflow: hidden;
+        }
+        
+        .test-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .test-name {
@@ -556,10 +578,26 @@
             font-size: 3rem;
             font-weight: 800;
             color: var(--accent);
-            opacity: 0.3;
+            opacity: 0.2;
             position: absolute;
             top: 1rem;
             right: 1.5rem;
+        }
+        
+        .process-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 136, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .process-icon i {
+            font-size: 1.4rem;
+            color: var(--accent);
         }
         
         .process-title {
@@ -648,8 +686,8 @@
         .footer-copy {
             font-size: 0.8rem;
             color: var(--text);
-            opacity: 0.5;
-            width: 100%;
+            opacity5;
+            width: 0.: 100%;
             text-align: center;
             margin-top: 1rem;
         }
@@ -735,32 +773,32 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">◎</div>
+                <div class="service-icon"><i class="ph ph-paint-brush-broad"></i></div>
                 <h3>Brand Design & Identity</h3>
                 <p>Stand out from the crowd with a powerful brand identity. We create memorable logos, comprehensive brand guidelines, and visual systems that capture your unique essence and resonate with your audience.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⬡</div>
+                <div class="service-icon"><i class="ph ph-code"></i></div>
                 <h3>Web Development</h3>
                 <p>Custom websites built with cutting-edge technology. Fast, secure, and fully responsive designs that provide seamless experiences across all devices and help convert visitors into customers.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">◬</div>
+                <div class="service-icon"><i class="ph ph-brain"></i></div>
                 <h3>AI Solutions</h3>
                 <p>Leverage the power of artificial intelligence to streamline operations and enhance customer experiences. From smart automation to AI-powered tools, we help future-proof your business.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">▶</div>
+                <div class="service-icon"><i class="ph ph-video-camera"></i></div>
                 <h3>Video Production</h3>
                 <p>Compelling visual storytelling through professional video production. Promotional videos, animations, and content that captures attention and communicates your message effectively.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">▣</div>
+                <div class="service-icon"><i class="ph ph-presentation-chart"></i></div>
                 <h3>Proposals & Pitch Decks</h3>
                 <p>Win more business with professionally designed proposals and investor pitch decks. We craft persuasive presentations that clearly communicate your value and drive decisions.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⬢</div>
+                <div class="service-icon"><i class="ph ph-package"></i></div>
                 <h3>Packaging Design</h3>
                 <p>Make your product impossible to ignore with packaging design that tells a story. We create eye-catching, memorable packaging that drives sales and builds brand loyalty.</p>
             </div>
@@ -831,22 +869,22 @@
         </div>
         <div class="why-grid">
             <div class="why-item">
-                <div class="why-num">01</div>
+                <div class="why-icon"><i class="ph ph-star"></i></div>
                 <h3 class="why-title">Premium Quality</h3>
                 <p class="why-desc">Every project receives our undivided attention and meticulous craftsmanship.</p>
             </div>
             <div class="why-item">
-                <div class="why-num">02</div>
+                <div class="why-icon"><i class="ph ph-clock"></i></div>
                 <h3 class="why-title">Fast Turnaround</h3>
                 <p class="why-desc">We deliver on time, every time. Your deadlines matter to us.</p>
             </div>
             <div class="why-item">
-                <div class="why-num">03</div>
+                <div class="why-icon"><i class="ph ph-lightbulb"></i></div>
                 <h3 class="why-title">Strategic Thinking</h3>
                 <p class="why-desc">Creative solutions backed by solid strategy and business insight.</p>
             </div>
             <div class="why-item">
-                <div class="why-num">04</div>
+                <div class="why-icon"><i class="ph ph-handshake"></i></div>
                 <h3 class="why-title">Long-term Support</h3>
                 <p class="why-desc">We're partners, not just vendors. We're here for the long haul.</p>
             </div>
@@ -860,10 +898,12 @@
         </div>
         <div class="test-grid">
             <div class="test-card">
-                <div class="test-stars">★★★★★</div>
+                <div class="test-stars">
+                    <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+                </div>
                 <p class="test-text">"Aleph transformed our brand completely. Our new identity has opened doors we never thought possible. Professional, creative, and a pleasure to work with."</p>
                 <div class="test-author">
-                    <div class="test-avatar">👤</div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Client"></div>
                     <div>
                         <div class="test-name">Tshepo Motloung</div>
                         <div class="test-role">CEO, Kutlwano Holdings</div>
@@ -871,10 +911,12 @@
                 </div>
             </div>
             <div class="test-card">
-                <div class="test-stars">★★★★★</div>
+                <div class="test-stars">
+                    <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+                </div>
                 <p class="test-text">"Our new website has dramatically improved our conversions. The team understood our vision and delivered beyond our expectations. Highly recommended!"</p>
                 <div class="test-author">
-                    <div class="test-avatar">👤</div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Client"></div>
                     <div>
                         <div class="test-name">Sarah Johnson</div>
                         <div class="test-role">Founder, KFAR Marketplace</div>
@@ -882,10 +924,12 @@
                 </div>
             </div>
             <div class="test-card">
-                <div class="test-stars">★★★★★</div>
+                <div class="test-stars">
+                    <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
+                </div>
                 <p class="test-text">"The pitch deck they created helped us secure funding. Their attention to detail and strategic approach made all the difference. Fantastic work!"</p>
                 <div class="test-author">
-                    <div class="test-avatar">👤</div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Client"></div>
                     <div>
                         <div class="test-name">Michael Chen</div>
                         <div class="test-role">Director, Ubuntu Farms</div>
@@ -903,21 +947,25 @@
         <div class="process-grid">
             <div class="process-step">
                 <span class="process-num">01</span>
+                <div class="process-icon"><i class="ph ph-magnifying-glass"></i></div>
                 <h3 class="process-title">Discovery</h3>
                 <p class="process-desc">We dive deep into your business, goals, and audience to understand what makes you unique.</p>
             </div>
             <div class="process-step">
                 <span class="process-num">02</span>
+                <div class="process-icon"><i class="ph ph-strategy"></i></div>
                 <h3 class="process-title">Strategy</h3>
                 <p class="process-desc">We develop a clear roadmap with creative concepts and technical approach aligned to your objectives.</p>
             </div>
             <div class="process-step">
                 <span class="process-num">03</span>
+                <div class="process-icon"><i class="ph ph-pencil-ruler"></i></div>
                 <h3 class="process-title">Creation</h3>
                 <p class="process-desc">Our team brings the strategy to life through design, development, and refinement.</p>
             </div>
             <div class="process-step">
                 <span class="process-num">04</span>
+                <div class="process-icon"><i class="ph ph-rocket-launch"></i></div>
                 <h3 class="process-title">Launch</h3>
                 <p class="process-desc">We deploy your project and provide ongoing support to ensure continued success.</p>
             </div>
