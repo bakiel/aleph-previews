@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleph Creative-Hub | AgriTech & Sustainable Solutions</title>
+    <title>The Steak Ranch | Plant-Based Fine Dining</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
         :root {
-            --bg: #f7f4ef;
-            --bg-dark: #e8e2d5;
-            --primary: #2d3a2e;
-            --accent: #7c9a6a;
-            --accent-dark: #5a7a4a;
-            --text: #2d2d2d;
-            --text-light: #5a5a5a;
+            --bg: #faf8f5;
+            --bg-dark: #f0ebe3;
+            --primary: #2a2118;
+            --accent: #8b4513;
+            --accent-light: #a0522d;
+            --text: #3d3229;
+            --text-light: #6b5e52;
             --white: #ffffff;
         }
         
@@ -42,26 +42,26 @@
         .organic-shape {
             position: absolute;
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            opacity: 0.5;
+            opacity: 0.4;
             z-index: -1;
         }
         
         .shape-1 {
-            width: 700px;
-            height: 700px;
-            background: linear-gradient(135deg, rgba(124, 154, 106, 0.12), rgba(124, 154, 106, 0.03));
-            top: -250px;
-            right: -200px;
-            animation: morph 20s ease-in-out infinite;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.08), rgba(139, 69, 19, 0.02));
+            top: -200px;
+            right: -150px;
+            animation: morph 18s ease-in-out infinite;
         }
         
         .shape-2 {
-            width: 500px;
-            height: 500px;
-            background: linear-gradient(135deg, rgba(45, 58, 46, 0.06), transparent);
-            bottom: 5%;
-            left: -200px;
-            animation: morph 25s ease-in-out infinite reverse;
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(135deg, rgba(42, 33, 24, 0.05), transparent);
+            bottom: 15%;
+            left: -180px;
+            animation: morph 22s ease-in-out infinite reverse;
         }
         
         @keyframes morph {
@@ -77,22 +77,21 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(247, 244, 239, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(12px);
         }
         
         .logo {
             font-family: 'Cormorant', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
+            font-size: 1.7rem;
+            font-weight: 500;
             color: var(--primary);
             text-decoration: none;
-            font-style: italic;
         }
         
         nav {
@@ -130,9 +129,9 @@
         }
         
         .cta-btn {
-            background: var(--primary);
-            color: var(--bg);
-            padding: 0.8rem 1.8rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.7rem 1.8rem;
             border-radius: 50px;
             font-weight: 500;
             font-size: 0.9rem;
@@ -141,7 +140,7 @@
         }
         
         .cta-btn:hover {
-            background: var(--accent);
+            background: var(--accent-light);
             transform: translateY(-2px);
         }
         
@@ -150,37 +149,39 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 5% 4rem;
+            padding: 7rem 5% 4rem;
             position: relative;
         }
         
         .hero-content {
-            max-width: 700px;
+            max-width: 650px;
             position: relative;
             z-index: 1;
         }
         
-        .hero-subtitle {
-            font-family: 'Cormorant', serif;
-            font-size: 1.1rem;
-            font-style: italic;
+        .hero-badge {
+            display: inline-block;
+            background: var(--bg-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
             color: var(--accent);
-            margin-bottom: 1rem;
-            font-weight: 400;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
         
         .hero h1 {
             font-family: 'Cormorant', serif;
             font-size: clamp(2.8rem, 6vw, 5rem);
             font-weight: 400;
-            line-height: 1.15;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
         
         .hero h1 em {
             font-style: italic;
-            color: var(--accent-dark);
+            color: var(--accent);
         }
         
         .hero p {
@@ -198,8 +199,8 @@
         }
         
         .btn-primary {
-            background: var(--primary);
-            color: var(--bg);
+            background: var(--accent);
+            color: var(--white);
             padding: 1rem 2.2rem;
             border-radius: 50px;
             font-weight: 500;
@@ -209,7 +210,7 @@
         }
         
         .btn-primary:hover {
-            background: var(--accent);
+            background: var(--accent-light);
             transform: translateY(-2px);
         }
         
@@ -227,17 +228,30 @@
         
         .btn-outline:hover {
             background: var(--primary);
-            color: var(--bg);
+            color: var(--white);
         }
         
-        /* About Banner */
-        .about-banner {
+        /* About */
+        .about {
             padding: 5rem 5%;
             background: var(--white);
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+        }
+        
+        .about-image {
+            aspect-ratio: 4/3;
+            border-radius: 24px;
+            overflow: hidden;
+            background: var(--bg-dark);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .about-text h2 {
@@ -254,21 +268,8 @@
             line-height: 1.8;
         }
         
-        .about-image {
-            aspect-ratio: 4/3;
-            border-radius: 24px;
-            overflow: hidden;
-            background: var(--bg-dark);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Services */
-        .services {
+        /* Menu Preview */
+        .menu-section {
             padding: 6rem 5%;
             position: relative;
         }
@@ -293,162 +294,107 @@
             color: var(--primary);
         }
         
-        .section-desc {
-            margin-top: 1rem;
-            color: var(--text-light);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .services-grid {
+        .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .service-card {
+        .menu-item {
             background: var(--white);
-            padding: 2.5rem;
-            border-radius: 24px;
+            border-radius: 20px;
+            overflow: hidden;
             border: 1px solid var(--bg-dark);
             transition: all 0.4s;
-            position: relative;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(42, 33, 24, 0.08);
+        }
+        
+        .menu-image {
+            aspect-ratio: 16/10;
             overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(45, 58, 46, 0.08);
-        }
-        
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--bg);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-icon i {
-            font-size: 1.6rem;
-            color: var(--accent-dark);
-        }
-        
-        .service-card h3 {
-            font-family: 'Cormorant', serif;
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 0.8rem;
-            color: var(--primary);
-        }
-        
-        .service-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        
-        /* Work */
-        .work {
-            padding: 6rem 5%;
             background: var(--bg-dark);
         }
         
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .work-item {
-            aspect-ratio: 4/5;
-            border-radius: 24px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            background: var(--white);
-        }
-        
-        .work-item img {
+        .menu-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s;
         }
         
-        .work-item:hover img {
-            transform: scale(1.08);
+        .menu-item:hover .menu-image img {
+            transform: scale(1.05);
         }
         
-        .work-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(to top, rgba(45, 58, 46, 0.92), transparent);
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.4s;
+        .menu-content {
+            padding: 1.8rem;
         }
         
-        .work-item:hover .work-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .work-category {
-            font-size: 0.75rem;
+        .menu-category {
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--accent);
             margin-bottom: 0.4rem;
         }
         
-        .work-title {
+        .menu-name {
             font-family: 'Cormorant', serif;
             font-size: 1.4rem;
             font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .menu-price {
+            font-family: 'Cormorant', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        
+        .menu-order {
+            background: var(--primary);
             color: var(--white);
-        }
-        
-        .work-desc {
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
             font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 0.4rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
         }
         
-        /* Why */
-        .why {
-            padding: 6rem 5%;
-            background: var(--white);
+        .menu-order:hover {
+            background: var(--accent);
         }
         
-        .why-grid {
+        /* Features */
+        .features {
+            padding: 5rem 5%;
+            background: var(--bg-dark);
+        }
+        
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
@@ -456,77 +402,46 @@
             margin: 0 auto;
         }
         
-        .why-item {
+        .feature-item {
             text-align: center;
-            padding: 2rem;
-            background: var(--bg);
-            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            background: var(--white);
+            border-radius: 16px;
         }
         
-        .why-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--white);
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--bg);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         
-        .why-icon i {
+        .feature-icon i {
             font-size: 1.5rem;
-            color: var(--accent-dark);
+            color: var(--accent);
         }
         
-        .why-title {
+        .feature-title {
             font-family: 'Cormorant', serif;
             font-size: 1.2rem;
             font-weight: 500;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         
-        .why-desc {
-            font-size: 0.9rem;
+        .feature-desc {
+            font-size: 0.85rem;
             color: var(--text-light);
-        }
-        
-        /* Stats */
-        .stats {
-            padding: 4rem 5%;
-            background: var(--primary);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 24px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-family: 'Cormorant', serif;
-            font-size: 3.5rem;
-            font-weight: 500;
-            color: var(--accent);
-            line-height: 1;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 0.5rem;
         }
         
         /* Testimonials */
         .testimonials {
             padding: 6rem 5%;
-            background: var(--bg);
+            background: var(--white);
         }
         
         .test-grid {
@@ -538,10 +453,9 @@
         }
         
         .test-card {
-            background: var(--white);
+            background: var(--bg);
             padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid var(--bg-dark);
+            border-radius: 16px;
         }
         
         .test-stars {
@@ -566,12 +480,12 @@
         .test-author {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         
         .test-avatar {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             overflow: hidden;
         }
@@ -585,75 +499,7 @@
         .test-name {
             font-weight: 500;
             color: var(--primary);
-            font-size: 0.95rem;
-        }
-        
-        .test-role {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        
-        /* Process */
-        .process {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-        
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .process-step {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg);
-            border-radius: 20px;
-            position: relative;
-        }
-        
-        .process-num {
-            font-family: 'Cormorant', serif;
-            font-size: 3rem;
-            font-weight: 500;
-            color: var(--accent);
-            opacity: 0.3;
-            position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-        }
-        
-        .process-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        
-        .process-icon i {
-            font-size: 1.4rem;
-            color: var(--accent-dark);
-        }
-        
-        .process-title {
-            font-family: 'Cormorant', serif;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .process-desc {
             font-size: 0.9rem;
-            color: var(--text-light);
         }
         
         /* CTA */
@@ -693,18 +539,28 @@
         .footer-brand {
             font-family: 'Cormorant', serif;
             font-size: 1.4rem;
-            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .footer-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
         
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .footer-links a {
             color: var(--bg);
-            text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             opacity: 0.8;
             transition: opacity 0.3s;
         }
@@ -715,26 +571,24 @@
         
         .footer-copy {
             font-size: 0.8rem;
-            opacity: 0.6;
+            opacity: 0.5;
             width: 100%;
             text-align: center;
             margin-top: 1rem;
         }
         
-        /* Responsive */
         @media (max-width: 1024px) {
-            .about-banner { grid-template-columns: 1fr; gap: 2rem; }
-            .work-grid { grid-template-columns: repeat(2, 1fr); }
-            .why-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .about { grid-template-columns: 1fr; gap: 2rem; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
             .test-grid { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 768px) {
             nav { display: none; }
-            .work-grid, .why-grid, .process-grid { grid-template-columns: 1fr; }
-            .stats { grid-template-columns: repeat(2, 1fr); border-radius: 16px; }
+            .features-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; text-align: center; }
-            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-info { justify-content: center; }
+            .footer-links { justify-content: center; }
         }
     </style>
 </head>
@@ -744,200 +598,176 @@
     <div class="organic-shape shape-2"></div>
     
     <header>
-        <a href="#" class="logo">Aleph</a>
+        <a href="#" class="logo">The Steak Ranch</a>
         <nav>
-            <a href="#services">Services</a>
-            <a href="#work">Projects</a>
             <a href="#about">About</a>
-            <a href="#contact" class="cta-btn">Get in Touch</a>
+            <a href="#menu">Menu</a>
+            <a href="#features">Why Us</a>
+            <a href="#contact" class="cta-btn">Reserve a Table</a>
         </nav>
     </header>
     
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-subtitle">Sustainable Agriculture Solutions</p>
-            <h1>Cultivating <em>Tomorrow's</em> Food Systems</h1>
-            <p>Aleph Creative-Hub partners with agripreneurs and agricultural enterprises to build sustainable, technology-driven solutions that transform farming communities and food production across Africa.</p>
+            <span class="hero-badge">Plant-Based Fine Dining</span>
+            <h1>The Perfect <em>Steak</em>, Zero Compromise</h1>
+            <p>Experience the future of fine dining at The Steak Ranch. Our plant-based steaks are crafted to perfection, delivering the taste, texture, and satisfaction you love without the compromise.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Start a Project</a>
-                <a href="#work" class="btn-outline">Our Projects</a>
+                <a href="#menu" class="btn-primary">View Menu</a>
+                <a href="#contact" class="btn-outline">Reserve Table</a>
             </div>
         </div>
     </section>
     
-    <section class="about-banner" id="about">
-        <div class="about-text">
-            <h2>Rooted in Agricultural Innovation</h2>
-            <p>At Aleph Creative-Hub, we understand that the future of agriculture lies in the intersection of tradition and technology. Since 2016, we've been helping agri-businesses, farms, and agricultural organisations grow through strategic design and digital innovation.</p>
-            <br>
-            <p>From smallholder farmer cooperatives to large-scale agricultural enterprises, we provide the creative and technical solutions needed to scale impact, improve efficiency, and connect with markets.</p>
-        </div>
+    <section class="about" id="about">
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" alt="Sustainable farm">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Plant-based steak">
+        </div>
+        <div class="about-text">
+            <h2>Crafted for the Connoisseur</h2>
+            <p>At The Steak Ranch, we believe that great food should be kind to the planet without sacrificing flavour. Our team of culinary experts has spent years perfecting plant-based steaks that rival the real thing in every way.</p>
+            <br>
+            <p>Using cutting-edge food technology and the finest organic ingredients, we create steaks that are juicy, flavourful, and satisfying. Whether you're a lifelong vegan or simply curious about plant-based dining, The Steak Ranch promises an experience that will change your perception of vegetarian cuisine.</p>
         </div>
     </section>
     
-    <section class="services" id="services">
+    <section class="menu-section" id="menu">
         <div class="section-header">
-            <p class="section-label">What We Offer</p>
-            <h2 class="section-title">AgriTech Solutions</h2>
-            <p class="section-desc">Specialised services for agricultural enterprises, farms, and food production businesses.</p>
+            <p class="section-label">Our Menu</p>
+            <h2 class="section-title">Signature Plant-Based Steaks</h2>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-plant"></i></div>
-                <h3>Agricultural Branding</h3>
-                <p>Brand identities that communicate trust, sustainability, and quality. From farm logos to cooperative branding, we help you stand out in the agricultural marketplace.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-device-mobile"></i></div>
-                <h3>Farm Management Apps</h3>
-                <p>Custom mobile and web applications for farm operations, inventory management, crop tracking, and farmer coordination.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-chart-line-up"></i></div>
-                <h3>Market Platforms</h3>
-                <p>Digital marketplaces connecting farmers directly to buyers, streamlining supply chains and improving price transparency.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-video-camera"></i></div>
-                <h3>Agricultural Video</h3>
-                <p>Documentary-style videos, training content, and promotional materials that tell your farm's story and showcase your products.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-file-text"></i></div>
-                <h3>Funding Proposals</h3>
-                <p>Compelling grant applications and investor pitch decks for agricultural projects, from farm expansion to agri-tech initiatives.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="ph ph-package"></i></div>
-                <h3>Product Packaging</h3>
-                <p>Packaging design that communicates the quality and origin of your agricultural products, from fresh produce to processed goods.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="work" id="work">
-        <div class="section-header">
-            <p class="section-label">Our Impact</p>
-            <h2 class="section-title">Agricultural Projects</h2>
-        </div>
-        <div class="work-grid">
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Ubuntu Farms">
-                <div class="work-content">
-                    <p class="work-category">Agriculture</p>
-                    <h3 class="work-title">Ubuntu Restoration Farms</h3>
-                    <p class="work-desc">445-hectare eco-agricultural development in Modimolle</p>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80" alt="Classic Steak">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Signature</p>
+                    <h3 class="menu-name">The Classic Ranch Steak</h3>
+                    <p class="menu-desc">Our flagship 8oz steak, crafted from a blend of organic plants. Perfectly seared with a rich, beefy flavour and satisfying chew.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R285</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?w=600&q=80" alt="KFAR Marketplace">
-                <div class="work-content">
-                    <p class="work-category">E-Commerce</p>
-                    <h3 class="work-title">KFAR Marketplace</h3>
-                    <p class="work-desc">Village of Peace artisan marketplace platform</p>
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Ribeye">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Premium</p>
+                    <h3 class="menu-name">Wagyu-Style Ribeye</h3>
+                    <p class="menu-desc">Marbled to perfection, this premium cut delivers exceptional tenderness and a rich, buttery flavour profile.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R395</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80" alt="UAEI">
-                <div class="work-content">
-                    <p class="work-category">Empowerment</p>
-                    <h3 class="work-title">UAEI Programme</h3>
-                    <p class="work-desc">25,000 smallholder farmer empowerment initiative</p>
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80" alt="Filet">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Lean</p>
+                    <h3 class="menu-name">Tenderloin Filet</h3>
+                    <p class="menu-desc">The leanest cut, exceptionally tender and delicate. Perfect for those who prefer a lighter, refined steak experience.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R345</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80" alt="Fresh Harvest">
-                <div class="work-content">
-                    <p class="work-category">Food Manufacturing</p>
-                    <h3 class="work-title">Fresh Harvest</h3>
-                    <p class="work-desc">Plant-based food production branding</p>
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=600&q=80" alt="BBQ Steak">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Smoked</p>
+                    <h3 class="menu-name">Smoked BBQ Brisket</h3>
+                    <p class="menu-desc">Slow-smoked for 12 hours with hickory, this hearty cut is layered with flavour and falls apart at the touch of a fork.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R320</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Gahn Eden">
-                <div class="work-content">
-                    <p class="work-category">Wellness</p>
-                    <h3 class="work-title">Gahn Eden</h3>
-                    <p class="work-desc">Organic products brand identity</p>
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=600&q=80" alt="Porterhouse">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Shareable</p>
+                    <h3 class="menu-name">Porterhouse for Two</h3>
+                    <p class="menu-desc">A generous 16oz shared cut combining tenderloin and strip. Perfect for couples or small groups wanting variety.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R580</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="work-item">
-                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=600&q=80" alt="Kutlwano Holdings">
-                <div class="work-content">
-                    <p class="work-category">Holdings</p>
-                    <h3 class="work-title">Kutlwano Holdings</h3>
-                    <p class="work-desc">BEE agricultural investment company</p>
+            <div class="menu-item">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=600&q=80" alt="Vegan Burger">
+                </div>
+                <div class="menu-content">
+                    <p class="menu-category">Casual</p>
+                    <h3 class="menu-name">The Ranch Burger</h3>
+                    <p class="menu-desc">Our plant-based patty grilled to perfection, served with all the classic fixings on a brioche bun.</p>
+                    <div class="menu-footer">
+                        <span class="menu-price">R195</span>
+                        <button class="menu-order">Order Now</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="stats">
-        <div class="stat-item">
-            <div class="stat-number">445ha</div>
-            <div class="stat-label">Farm Land Developed</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">25K</div>
-            <div class="stat-label">Farmers Empowered</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">R220M</div>
-            <div class="stat-label">Project Investment</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">Level 1</div>
-            <div class="stat-label">B-BBEE Rating</div>
-        </div>
-    </section>
-    
-    <section class="why">
+    <section class="features" id="features">
         <div class="section-header">
             <p class="section-label">Why Choose Us</p>
-            <h2 class="section-title">The Aleph Difference</h2>
+            <h2 class="section-title">The Steak Ranch Difference</h2>
         </div>
-        <div class="why-grid">
-            <div class="why-item">
-                <div class="why-icon"><i class="ph ph-seedling"></i></div>
-                <h3 class="why-title">Agri Expertise</h3>
-                <p class="why-desc">We understand the unique challenges and opportunities in agriculture.</p>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-leaf"></i></div>
+                <h3 class="feature-title">100% Plant-Based</h3>
+                <p class="feature-desc">Made entirely from plants, no animal products ever.</p>
             </div>
-            <div class="why-item">
-                <div class="why-icon"><i class="ph ph-clock"></i></div>
-                <h3 class="why-title">Fast Delivery</h3>
-                <p class="why-desc">We deliver on time, every time. Your project deadlines matter to us.</p>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-heart"></i></div>
+                <h3 class="feature-title">Heart Healthy</h3>
+                <p class="feature-desc">Lower in saturated fat, better for your cardiovascular health.</p>
             </div>
-            <div class="why-item">
-                <div class="why-icon"><i class="ph ph-lightbulb"></i></div>
-                <h3 class="why-title">Strategic Approach</h3>
-                <p class="why-desc">Creative solutions backed by solid strategy and business insight.</p>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-globe"></i></div>
+                <h3 class="feature-title">Eco-Friendly</h3>
+                <p class="feature-desc">80% less water, 90% fewer emissions than traditional beef.</p>
             </div>
-            <div class="why-item">
-                <div class="why-icon"><i class="ph ph-handshake"></i></div>
-                <h3 class="why-title">Long-term Partnership</h3>
-                <p class="why-desc">We're partners, not just vendors. We're here for the long haul.</p>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-organic"></i></div>
+                <h3 class="feature-title">Organic Ingredients</h3>
+                <p class="feature-desc">Sourced from certified organic farms and suppliers.</p>
             </div>
         </div>
     </section>
     
     <section class="testimonials">
         <div class="section-header">
-            <p class="section-label">Client Feedback</p>
-            <h2 class="section-title">What Our Partners Say</h2>
+            <p class="section-label">What People Say</p>
+            <h2 class="section-title">Guest Reviews</h2>
         </div>
         <div class="test-grid">
             <div class="test-card">
                 <div class="test-stars">
                     <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
                 </div>
-                <p class="test-text">"Aleph transformed our agricultural brand. Our new identity has helped us attract investors and partners for our farm development. Professional, creative, and truly understood our vision."</p>
+                <p class="test-text">"I was blown away. The steak was incredibly realistic - the texture, the juiciness, everything was spot on. Even my meat-eating friends were impressed!"</p>
                 <div class="test-author">
-                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Client"></div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Guest"></div>
                     <div>
-                        <div class="test-name">Tshepo Motloung</div>
-                        <div class="test-role">CEO, Kutlwano Holdings</div>
+                        <div class="test-name">Emma Richardson</div>
                     </div>
                 </div>
             </div>
@@ -945,12 +775,11 @@
                 <div class="test-stars">
                     <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
                 </div>
-                <p class="test-text">"Our farmer marketplace platform has transformed how we connect producers with consumers. The team understood our mission and delivered beyond expectations."</p>
+                <p class="test-text">"Finally, a plant-based steak that actually satisfies. The Wagyu-style ribeye is divine - so tender and flavourful. We'll definitely be back."</p>
                 <div class="test-author">
-                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Client"></div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Guest"></div>
                     <div>
-                        <div class="test-name">Sarah Johnson</div>
-                        <div class="test-role">Founder, KFAR Marketplace</div>
+                        <div class="test-name">James Mitchell</div>
                     </div>
                 </div>
             </div>
@@ -958,65 +787,36 @@
                 <div class="test-stars">
                     <i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i><i class="ph ph-star-fill"></i>
                 </div>
-                <p class="test-text">"The funding proposal they created helped us secure R220 million for our agricultural project. Their attention to detail and strategic approach made all the difference."</p>
+                <p class="test-text">"The ambiance is perfect and the service is impeccable. The smoked brisket is a must-try - absolutely incredible plant-based BBQ experience."</p>
                 <div class="test-author">
-                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Client"></div>
+                    <div class="test-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Guest"></div>
                     <div>
-                        <div class="test-name">Michael Chen</div>
-                        <div class="test-role">Director, Ubuntu Farms</div>
+                        <div class="test-name">Sarah Thompson</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="process">
-        <div class="section-header">
-            <p class="section-label">How We Work</p>
-            <h2 class="section-title">Our Process</h2>
-        </div>
-        <div class="process-grid">
-            <div class="process-step">
-                <span class="process-num">01</span>
-                <div class="process-icon"><i class="ph ph-magnifying-glass"></i></div>
-                <h3 class="process-title">Discovery</h3>
-                <p class="process-desc">We learn about your farm, goals, and challenges.</p>
-            </div>
-            <div class="process-step">
-                <span class="process-num">02</span>
-                <div class="process-icon"><i class="ph ph-strategy"></i></div>
-                <h3 class="process-title">Strategy</h3>
-                <p class="process-desc">We develop a roadmap aligned to your objectives.</p>
-            </div>
-            <div class="process-step">
-                <span class="process-num">03</span>
-                <div class="process-icon"><i class="ph ph-pencil-ruler"></i></div>
-                <h3 class="process-title">Creation</h3>
-                <p class="process-desc">Our team brings the strategy to life.</p>
-            </div>
-            <div class="process-step">
-                <span class="process-num">04</span>
-                <div class="process-icon"><i class="ph ph-rocket-launch"></i></div>
-                <h3 class="process-title">Launch</h3>
-                <p class="process-desc">We deploy and support your growth.</p>
             </div>
         </div>
     </section>
     
     <section class="cta" id="contact">
-        <h2>Let's Grow Something Great</h2>
-        <p>Ready to transform your agricultural enterprise? We'd love to hear about your project.</p>
-        <a href="mailto:bakiel@alephcreativehub.co.za" class="btn-primary">Get in Touch</a>
+        <h2>Reserve Your Table Today</h2>
+        <p>Experience the future of fine dining. Book your table now and discover why The Steak Ranch is revolutionising plant-based cuisine.</p>
+        <a href="#" class="btn-primary">Book Now</a>
     </section>
     
     <footer>
-        <div class="footer-brand">Aleph Creative-Hub</div>
-        <div class="footer-links">
-            <a href="#services">Services</a>
-            <a href="#work">Projects</a>
-            <a href="mailto:bakiel@alephcreativehub.co.za">Contact</a>
+        <div class="footer-brand">The Steak Ranch</div>
+        <div class="footer-info">
+            <p>123 Gourmet Lane, Sandton</p>
+            <p>Open Daily: 11am - 10pm</p>
+            <p>+27 11 234 5678</p>
         </div>
-        <p class="footer-copy">&copy; 2025 Aleph Creative-Hub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph ph-twitter-logo"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2025 The Steak Ranch. All rights reserved.</p>
     </footer>
 </body>
 </html>
