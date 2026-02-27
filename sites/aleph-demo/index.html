@@ -36,33 +36,33 @@
             line-height: 1.7;
         }
         
+        a { text-decoration: none; }
+        
         /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 5%;
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(10, 10, 10, 0.8);
+            background: rgba(10, 10, 10, 0.85);
             backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
         }
         
         .logo {
             font-family: 'Syne', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--primary);
-            text-decoration: none;
             letter-spacing: -0.02em;
         }
         
-        .logo span {
-            color: var(--accent);
-        }
+        .logo span { color: var(--accent); }
         
         nav {
             display: flex;
@@ -72,15 +72,12 @@
         
         nav a {
             color: var(--text);
-            text-decoration: none;
             font-size: 0.9rem;
             font-weight: 400;
             transition: color 0.3s;
         }
         
-        nav a:hover {
-            color: var(--accent);
-        }
+        nav a:hover { color: var(--accent); }
         
         .cta-btn {
             background: var(--accent);
@@ -89,7 +86,6 @@
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.85rem;
-            text-decoration: none;
             transition: all 0.3s;
         }
         
@@ -103,7 +99,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 5% 4rem;
+            padding: 7rem 5% 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -111,16 +107,18 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 20%;
-            right: -10%;
-            width: 60%;
-            height: 80%;
-            background: radial-gradient(ellipse, rgba(0, 255, 136, 0.06) 0%, transparent 60%);
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 80% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(0, 255, 136, 0.04) 0%, transparent 40%);
             pointer-events: none;
         }
         
         .hero-content {
-            max-width: 750px;
+            max-width: 720px;
             position: relative;
             z-index: 1;
         }
@@ -154,22 +152,20 @@
         
         .hero h1 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-size: clamp(2.8rem, 6.5vw, 5rem);
             font-weight: 800;
-            line-height: 1.05;
+            line-height: 1.08;
             margin-bottom: 1.5rem;
             color: var(--primary);
             letter-spacing: -0.03em;
         }
         
-        .hero h1 span {
-            color: var(--accent);
-        }
+        .hero h1 span { color: var(--accent); }
         
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text);
-            max-width: 480px;
+            max-width: 520px;
             margin-bottom: 2.5rem;
             font-weight: 300;
         }
@@ -183,32 +179,69 @@
         .btn-main {
             background: var(--accent);
             color: var(--bg);
-            padding: 1rem 2rem;
+            padding: 1rem 2.2rem;
             border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             transition: all 0.3s;
+            display: inline-block;
         }
         
         .btn-main:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.25);
         }
         
         .btn-sec {
             background: transparent;
             color: var(--primary);
-            padding: 1rem 2rem;
+            padding: 1rem 2.2rem;
             border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             border: 1px solid var(--border);
             transition: all 0.3s;
+            display: inline-block;
         }
         
         .btn-sec:hover {
             border-color: var(--accent);
             color: var(--accent);
+        }
+        
+        /* About Banner */
+        .about-banner {
+            padding: 4rem 5%;
+            background: var(--surface);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            aspect-ratio: 16/10;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--surface-light), var(--surface));
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         /* Services */
@@ -217,7 +250,8 @@
         }
         
         .section-head {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
+            max-width: 600px;
         }
         
         .section-label {
@@ -230,15 +264,22 @@
         
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 700;
             color: var(--primary);
             letter-spacing: -0.02em;
         }
         
+        .section-desc {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: var(--text);
+            max-width: 500px;
+        }
+        
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 1.5rem;
         }
         
@@ -252,18 +293,19 @@
         
         .service-card:hover {
             border-color: var(--accent);
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
         
         .service-icon {
-            width: 50px;
-            height: 50px;
+            width: 54px;
+            height: 54px;
             background: rgba(0, 255, 136, 0.08);
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1.5rem;
         }
         
@@ -279,6 +321,7 @@
             font-size: 0.95rem;
             color: var(--text);
             font-weight: 300;
+            line-height: 1.7;
         }
         
         /* Work */
@@ -294,24 +337,35 @@
         }
         
         .work-item {
-            aspect-ratio: 1;
-            background: var(--bg);
+            aspect-ratio: 4/5;
             border-radius: 20px;
             overflow: hidden;
             position: relative;
             cursor: pointer;
+            background: var(--surface-light);
+        }
+        
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .work-item:hover img {
+            transform: scale(1.08);
         }
         
         .work-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
             opacity: 0;
             transition: opacity 0.4s;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 1.5rem;
+            padding: 1.8rem;
         }
         
         .work-item:hover .work-overlay {
@@ -323,28 +377,136 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--accent);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
         }
         
         .work-name {
             font-family: 'Syne', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--primary);
         }
         
-        .work-emoji {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3.5rem;
-            opacity: 0.2;
+        .work-desc {
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-top: 0.5rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s 0.1s;
+        }
+        
+        .work-item:hover .work-desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Why Choose Us */
+        .why {
+            padding: 6rem 5%;
+            background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .why-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        
+        .why-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .why-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .why-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 5%;
+            background: var(--surface);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .test-card {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        
+        .test-stars {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .test-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .test-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .test-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .test-name {
+            font-weight: 500;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        
+        .test-role {
+            font-size: 0.8rem;
+            color: var(--text);
         }
         
         /* Stats */
         .stats {
-            padding: 4rem 5%;
+            padding: 4.5rem 5%;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
@@ -358,42 +520,102 @@
         
         .stat-num {
             font-family: 'Syne', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
             color: var(--accent);
+            line-height: 1;
         }
         
         .stat-lbl {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text);
-            margin-top: 0.3rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Process */
+        .process {
+            padding: 6rem 5%;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 2rem;
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        
+        .process-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+        }
+        
+        .process-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .process-desc {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.6;
         }
         
         /* CTA */
         .cta {
             padding: 8rem 5%;
             text-align: center;
+            position: relative;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(ellipse, rgba(0, 255, 136, 0.08) 0%, transparent 70%);
+            pointer-events: none;
         }
         
         .cta h2 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2.2rem, 4vw, 3rem);
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
+            position: relative;
         }
         
         .cta p {
             color: var(--text);
-            font-size: 1rem;
-            max-width: 400px;
+            font-size: 1.05rem;
+            max-width: 450px;
             margin: 0 auto 2rem;
+            position: relative;
         }
         
         /* Footer */
         footer {
-            padding: 3rem 5%;
+            padding: 3.5rem 5%;
             border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
@@ -404,13 +626,11 @@
         
         .footer-brand {
             font-family: 'Syne', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
         }
         
-        .footer-brand span {
-            color: var(--accent);
-        }
+        .footer-brand span { color: var(--accent); }
         
         .footer-links {
             display: flex;
@@ -419,14 +639,11 @@
         
         .footer-links a {
             color: var(--text);
-            text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
-            color: var(--accent);
-        }
+        .footer-links a:hover { color: var(--accent); }
         
         .footer-copy {
             font-size: 0.8rem;
@@ -438,17 +655,17 @@
         }
         
         @media (max-width: 1024px) {
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .about-banner { grid-template-columns: 1fr; gap: 2rem; }
+            .work-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .test-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (max-width: 768px) {
             nav { display: none; }
-            .work-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .work-grid, .why-grid, .process-grid { grid-template-columns: 1fr; }
             .stats { grid-template-columns: repeat(2, 1fr); }
             footer { flex-direction: column; text-align: center; }
             .footer-links { flex-wrap: wrap; justify-content: center; }
@@ -459,10 +676,11 @@
     <header>
         <a href="#" class="logo">Aleph<span>.</span></a>
         <nav>
+            <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
-            <a href="mailto:bakiel@alephcreativehub.co.za" class="cta-btn">Start Project</a>
+            <a href="#process">Process</a>
+            <a href="#contact" class="cta-btn">Start Project</a>
         </nav>
     </header>
     
@@ -470,30 +688,42 @@
         <div class="hero-content">
             <div class="hero-tag">Available for Projects</div>
             <h1>Design. Web.<br><span>AI Solutions.</span></h1>
-            <p>Aleph Creative-Hub delivers premium design, modern web development, and AI-powered solutions that help your business grow.</p>
+            <p>We are Aleph Creative-Hub, a premium design and digital agency helping brands grow through stunning visuals, powerful websites, and intelligent AI solutions. Let's build something extraordinary together.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-main">Start a Project</a>
-                <a href="#work" class="btn-sec">View Work</a>
+                <a href="#work" class="btn-sec">View Our Work</a>
             </div>
+        </div>
+    </section>
+    
+    <section class="about-banner" id="about">
+        <div class="about-text">
+            <h2>Crafting Digital Experiences That Matter</h2>
+            <p>At Aleph Creative-Hub, we believe great design is more than aesthetics. It's about creating meaningful connections between brands and their audiences. Since 2016, we've been helping businesses transform their vision into powerful digital realities that drive real results.</p>
+            <br>
+            <p>Our team combines creativity with technical expertise to deliver solutions that not only look exceptional but perform brilliantly. From brand identity to complex web applications, we bring ideas to life with precision and passion.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team collaboration">
         </div>
     </section>
     
     <section class="stats">
         <div class="stat-item">
             <div class="stat-num">150+</div>
-            <div class="stat-lbl">Projects</div>
+            <div class="stat-lbl">Projects Completed</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">50+</div>
-            <div class="stat-lbl">Clients</div>
+            <div class="stat-lbl">Happy Clients</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">8+</div>
-            <div class="stat-lbl">Years</div>
+            <div class="stat-lbl">Years Experience</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">24h</div>
-            <div class="stat-lbl">Response</div>
+            <div class="stat-lbl">Avg Response Time</div>
         </div>
     </section>
     
@@ -501,37 +731,38 @@
         <div class="section-head">
             <p class="section-label">What We Do</p>
             <h2 class="section-title">Our Services</h2>
+            <p class="section-desc">Comprehensive creative solutions tailored to elevate your brand and accelerate your growth.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">◎</div>
-                <h3>Brand Design</h3>
-                <p>Logo design, visual identity, and brand guidelines that make your business unforgettable.</p>
+                <h3>Brand Design & Identity</h3>
+                <p>Stand out from the crowd with a powerful brand identity. We create memorable logos, comprehensive brand guidelines, and visual systems that capture your unique essence and resonate with your audience.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">⬡</div>
                 <h3>Web Development</h3>
-                <p>Custom websites built with modern tech. Fast, responsive, and designed to convert.</p>
+                <p>Custom websites built with cutting-edge technology. Fast, secure, and fully responsive designs that provide seamless experiences across all devices and help convert visitors into customers.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">◬</div>
                 <h3>AI Solutions</h3>
-                <p>Smart automation, AI integration, and intelligent tools to streamline your operations.</p>
+                <p>Leverage the power of artificial intelligence to streamline operations and enhance customer experiences. From smart automation to AI-powered tools, we help future-proof your business.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">▶</div>
                 <h3>Video Production</h3>
-                <p>Promotional videos, animations, and content that tells your story with impact.</p>
+                <p>Compelling visual storytelling through professional video production. Promotional videos, animations, and content that captures attention and communicates your message effectively.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">▣</div>
-                <h3>Proposals & Decks</h3>
-                <p>Winning pitch decks and proposals that help you close more deals.</p>
+                <h3>Proposals & Pitch Decks</h3>
+                <p>Win more business with professionally designed proposals and investor pitch decks. We craft persuasive presentations that clearly communicate your value and drive decisions.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">⬢</div>
                 <h3>Packaging Design</h3>
-                <p>Product packaging that stands out and connects with your customers.</p>
+                <p>Make your product impossible to ignore with packaging design that tells a story. We create eye-catching, memorable packaging that drives sales and builds brand loyalty.</p>
             </div>
         </div>
     </section>
@@ -543,59 +774,166 @@
         </div>
         <div class="work-grid">
             <div class="work-item">
-                <span class="work-emoji">🏗</span>
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Kutlwano Holdings">
                 <div class="work-overlay">
                     <p class="work-cat">Branding</p>
                     <h3 class="work-name">Kutlwano Holdings</h3>
+                    <p class="work-desc">Complete brand identity for a holdings company</p>
                 </div>
             </div>
             <div class="work-item">
-                <span class="work-emoji">🛒</span>
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="KFAR Marketplace">
                 <div class="work-overlay">
                     <p class="work-cat">E-Commerce</p>
                     <h3 class="work-name">KFAR Marketplace</h3>
+                    <p class="work-desc">Online marketplace for artisan products</p>
                 </div>
             </div>
             <div class="work-item">
-                <span class="work-emoji">📊</span>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="JASPER Portal">
                 <div class="work-overlay">
                     <p class="work-cat">Web Platform</p>
                     <h3 class="work-name">JASPER Portal</h3>
+                    <p class="work-desc">Financial modeling platform for investors</p>
                 </div>
             </div>
             <div class="work-item">
-                <span class="work-emoji">🌾</span>
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Ubuntu Farms">
                 <div class="work-overlay">
                     <p class="work-cat">Agriculture</p>
                     <h3 class="work-name">Ubuntu Farms</h3>
+                    <p class="work-desc">Brand identity for agricultural enterprise</p>
                 </div>
             </div>
             <div class="work-item">
-                <span class="work-emoji">🏠</span>
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Gahn Eden">
                 <div class="work-overlay">
                     <p class="work-cat">Brand Identity</p>
                     <h3 class="work-name">Gahn Eden</h3>
+                    <p class="work-desc">Complete brand refresh for wellness brand</p>
                 </div>
             </div>
             <div class="work-item">
-                <span class="work-emoji">💎</span>
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="JASPER Financial">
                 <div class="work-overlay">
                     <p class="work-cat">Finance</p>
                     <h3 class="work-name">JASPER Financial</h3>
+                    <p class="work-desc">Financial services branding and web design</p>
                 </div>
             </div>
         </div>
     </section>
     
+    <section class="why">
+        <div class="section-head">
+            <p class="section-label">Why Choose Us</p>
+            <h2 class="section-title">The Aleph Difference</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-num">01</div>
+                <h3 class="why-title">Premium Quality</h3>
+                <p class="why-desc">Every project receives our undivided attention and meticulous craftsmanship.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">02</div>
+                <h3 class="why-title">Fast Turnaround</h3>
+                <p class="why-desc">We deliver on time, every time. Your deadlines matter to us.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">03</div>
+                <h3 class="why-title">Strategic Thinking</h3>
+                <p class="why-desc">Creative solutions backed by solid strategy and business insight.</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">04</div>
+                <h3 class="why-title">Long-term Support</h3>
+                <p class="why-desc">We're partners, not just vendors. We're here for the long haul.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="section-head">
+            <p class="section-label">Client Feedback</p>
+            <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div class="test-grid">
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <p class="test-text">"Aleph transformed our brand completely. Our new identity has opened doors we never thought possible. Professional, creative, and a pleasure to work with."</p>
+                <div class="test-author">
+                    <div class="test-avatar">👤</div>
+                    <div>
+                        <div class="test-name">Tshepo Motloung</div>
+                        <div class="test-role">CEO, Kutlwano Holdings</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <p class="test-text">"Our new website has dramatically improved our conversions. The team understood our vision and delivered beyond our expectations. Highly recommended!"</p>
+                <div class="test-author">
+                    <div class="test-avatar">👤</div>
+                    <div>
+                        <div class="test-name">Sarah Johnson</div>
+                        <div class="test-role">Founder, KFAR Marketplace</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-card">
+                <div class="test-stars">★★★★★</div>
+                <p class="test-text">"The pitch deck they created helped us secure funding. Their attention to detail and strategic approach made all the difference. Fantastic work!"</p>
+                <div class="test-author">
+                    <div class="test-avatar">👤</div>
+                    <div>
+                        <div class="test-name">Michael Chen</div>
+                        <div class="test-role">Director, Ubuntu Farms</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="process" id="process">
+        <div class="section-head">
+            <p class="section-label">How We Work</p>
+            <h2 class="section-title">Our Process</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="process-num">01</span>
+                <h3 class="process-title">Discovery</h3>
+                <p class="process-desc">We dive deep into your business, goals, and audience to understand what makes you unique.</p>
+            </div>
+            <div class="process-step">
+                <span class="process-num">02</span>
+                <h3 class="process-title">Strategy</h3>
+                <p class="process-desc">We develop a clear roadmap with creative concepts and technical approach aligned to your objectives.</p>
+            </div>
+            <div class="process-step">
+                <span class="process-num">03</span>
+                <h3 class="process-title">Creation</h3>
+                <p class="process-desc">Our team brings the strategy to life through design, development, and refinement.</p>
+            </div>
+            <div class="process-step">
+                <span class="process-num">04</span>
+                <h3 class="process-title">Launch</h3>
+                <p class="process-desc">We deploy your project and provide ongoing support to ensure continued success.</p>
+            </div>
+        </div>
+    </section>
+    
     <section class="cta" id="contact">
-        <h2>Ready to Build?</h2>
-        <p>Let's create something amazing together. Reach out to start your project.</p>
+        <h2>Ready to Build Something Amazing?</h2>
+        <p>Let's discuss your project and create something extraordinary together. Reach out today for a free consultation.</p>
         <a href="mailto:bakiel@alephcreativehub.co.za" class="btn-main">Get in Touch</a>
     </section>
     
     <footer>
         <div class="footer-brand">Aleph<span>.</span> Creative-Hub</div>
         <div class="footer-links">
+            <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#work">Work</a>
             <a href="mailto:bakiel@alephcreativehub.co.za">Contact</a>
